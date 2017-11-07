@@ -1,0 +1,32 @@
+@import '../mdlMixins';
+@import '../colors';
+
+.contact-selectfield {
+  position: relative;
+
+  label#{&}--selection {
+    display: none;
+  }
+
+  select#{&}--selection {
+    padding: 4px 0;
+    background-color: transparent;
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    border: 1px solid $color--grey-200;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &--label {
+    color: $color--light-green-500;
+    font-size: $input-text-floating-label-fontsize;
+    top: $input-text-vertical-spacing - ($input-text-floating-label-fontsize + $input-text-padding);
+    visibility: visible;
+  }
+
+}
+

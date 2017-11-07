@@ -1,0 +1,75 @@
+@import '../_colors';
+@import "../mdlMixins";
+
+$gray-dark: $color--grey-200;
+$gray: $color--grey-100;
+
+
+$green-dark: $color--light-green-600;
+$green: $color--light-green-500;
+
+$base: $color--white;
+
+
+.pricing-table {
+  @include shadow-2dp();
+  &:hover {
+    @include shadow-4dp();
+  }
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  border-radius: 2px;
+  box-sizing: border-box;
+  background-color:$base;
+
+  &--title {
+    h2{
+     margin: 16px 8px;
+    }
+    background-color: $gray-dark;
+       .featured & {
+      background-color: $green-dark;
+    }
+  }
+  &--subtitle {
+    padding: 32px 8px 16px 8px;
+    background-color: $gray;
+       .featured & {
+      background-color: $green;
+    }
+  }
+  &--description {
+    padding: 0 8px;
+    margin: 0;
+  }
+  &--features {
+    margin: 16px 8px;
+    text-align: left;
+  }
+
+
+  &--feature {
+    padding: 10px 4px;
+    margin: 0;
+  }
+}
+
+ul.pricing-table--features {
+list-style-type: none;
+  position: relative;
+   & > li:before {
+     content: "";
+     position: absolute;
+     margin: 10px 0 0 -20px;
+    height: 5px;
+     width: 5px;
+     border-radius: 50%;
+     display: inline-block;
+     background: $color--grey-400;
+     .featured &{
+       background: $green;
+     }
+   }
+}

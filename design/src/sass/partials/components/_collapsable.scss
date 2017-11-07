@@ -1,0 +1,36 @@
+@import "../_colors";
+.collapsible {
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px;
+  box-sizing: border-box;
+  list-style-type: none;
+  width: 100%;
+  background: $color-white;
+  & > :last-child {
+    .collapsible--header {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.show-body {
+  & .collapsible--body {
+    display: block;
+  }
+}
+
+.collapsible--header {
+  background-color: $color-primary;
+  padding: 8px;
+  margin-top: 0;
+  margin-bottom: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+.collapsible--body {
+  padding: 8px;
+  background: $color-white;
+  display: none;
+}

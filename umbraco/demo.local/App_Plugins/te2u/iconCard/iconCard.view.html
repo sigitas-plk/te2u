@@ -1,0 +1,36 @@
+<div ng-controller="te2uIconPicker">
+    <table>
+        <tr>
+            <td>
+                <a ng-click="choose()">
+                    <i ng-show="control.icon" style="font-size:48px; padding:8px" class="btn material-icons">{{control.icon}}</i>
+                    <p class="btn" ng-hide="control.icon">Choose Icon</p>
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+<div ng-controller="te2uIconCard">
+    <table style="width: 100%">
+        <tr>
+            <td>
+                <label for="title">Title:</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input  ng-model="control.title" style="width: 95%" id="title" type="text" placeholder="Type in title.."/>
+            </td>
+        </tr>
+        <tr >
+            <td style="padding-top:16px">
+                <label for="description">Description:</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <textarea   ng-model="control.description" style="width: 95%; padding:8px" id="description" rows="5" type="text" placeholder="Type in description.."/>
+            </td>
+        </tr>
+    </table>
+</div>

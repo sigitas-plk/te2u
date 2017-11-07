@@ -1,0 +1,11 @@
+.office-picture{
+  &--container{
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ width: 100%;
+}

@@ -1,0 +1,50 @@
+@import '../colors';
+@import '../../../../tools/node_modules/material-design-lite/src/_variables.scss';
+@import '../../../../tools/node_modules/material-design-lite/src/_mixins.scss';
+
+
+$padding: 16px;
+.blogpost-card {
+  background: white;
+  @include shadow-2dp();
+  &:hover {
+    @include shadow-4dp();
+  }
+  &--date {
+    padding: $padding/2 $padding $padding/2  $padding;
+    margin: 0;
+    color: $color--light-green-300;
+  }
+  &--title {
+    padding: 0 $padding $padding $padding;
+    margin: 0;
+    color: $color--grey-800;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  &--body {
+    padding: 0 $padding $padding $padding;
+    color: $color--grey-600;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+  &--action {
+    border-top: 1px solid $color--grey-200;
+    padding: $padding/2;
+  }
+  &--img {
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+    &-container {
+      position: relative;
+      overflow: hidden;
+      height: 10em;
+      background: $color--orange-300;
+    }
+  }
+}
+

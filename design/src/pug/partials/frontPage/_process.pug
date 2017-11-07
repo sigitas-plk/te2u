@@ -1,0 +1,39 @@
+include ../_mixins.pug
+
+mixin icon(side, iconName)
+    i(class='material-icons mdl-shadow--2dp icon-bubble icon-bubble-'+side +" mdl-cell--hide-phone")= iconName
+
+mixin content(title, body)
+    div
+        h3(class="mdl-typography--title")= title
+        p= body
+
+mixin cell
+    .vertical-align.mdl-cell.mdl-cell--4-col.mdl-cell--6-col-desktop
+        block
+
+
+section.te2u
+    +container
+        +sectionTitle("How does it work?")
+        .mdl-cell.mdl-cell--8-col.mdl-cell--2-offset-desktop.mdl-cell--6-col-tablet.mdl-cell--1-offset-tablet.mdl-grid.mdl-grid--no-spacing
+            +cell
+                +content("Test yourself","Take the free test and enjoy a free goal setting session with your coach")
+            +cell
+                +icon("left", "assignment")
+            +cell
+                +icon("right","event")
+            +cell
+                +content("Pick Sessions","Choose the number of coaching sessions you want")
+            +cell
+                +content("Prepare","Before each session your coach will send you tasks to complete")
+            +cell
+                +icon("left","assignment_ind")
+            +cell
+                +icon("right","speaker_notes")
+            +cell
+                +content("Talk","Coaching sessions are mostly talk time. Just you and your coach.")
+            +cell
+                +content("Feedback","We will give you feedback during the session as well as after via e-mail")
+            +cell
+                +icon("left","feedback")

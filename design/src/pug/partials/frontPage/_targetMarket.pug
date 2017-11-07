@@ -1,0 +1,17 @@
+include ../_mixins.pug
+
+-var customerTypes = [{"title":"Ambitious and Driven Learners","icon":"local_library"},{"title":"Intermediate to Advanced speakers","icon":"record_voice_over"},{"title":"Professionals, Managers and Executives","icon":"business_center"},{"title":"Entrepreneurs, Coaches & 'Creatives'","icon":"style"}];
+
+section.te2u.dark-2
+    +container
+        +sectionTitle("Our services are best suited for")
+        for customer in customerTypes
+            .mdl-cell.mdl-cell--3-col.mdl-cell--4-col-tablet.mdl-cell--5-col-phone
+                .market-table
+                    .market-table--icon
+                        i.material-icons #{customer.icon}
+                    .market-table--heading
+                        h4.mdl-typography--title #{customer.title}
+                    .market-table--body
+                        p Individuals that enjoy learning and really want to experience the benefit of communicating at a more advanced level.
+                        p Individuals that enjoy learning and really want to experience the benefit of communicating at a more advanced level.

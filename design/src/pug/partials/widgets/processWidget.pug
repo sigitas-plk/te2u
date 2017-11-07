@@ -1,0 +1,28 @@
+html(ng-app="app")
+    head
+        link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        link(rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.light_green-orange.min.css")
+        script(src="js/angular.js")
+        script(src="js/widgets/process.controller.js")
+    body(ng-controller="te2uProcessController")
+        .mdl-grid
+            .mdl-cell.mdl-cell-6
+                ul.mdl-list
+                    li.mdl-list__item
+                        label.mdl-typography--subhead(for="title") Title:
+                    li.mdl-list__item
+                        input.mdl-textfield__input(type="text" id="title")
+                    li.mdl-list__item
+                        hr
+
+                .mdl-textfield
+                    input.mdl-textfield__input(type="text" id="title2")
+                    label.mdl-textfield__label(for="title2") Title:
+
+
+
+
+
+
+

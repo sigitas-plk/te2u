@@ -1,0 +1,74 @@
+@import '_colors';
+@import '_mdlMixins.scss';
+@import 'components/_components';
+
+.max-width{
+  max-width: 1000px;
+}
+.te2u {
+  padding: 24px 0;
+}
+.mdl-typography--display-1 {
+  font-weight: 300;
+  text-align: center;
+  color: $color-primary;
+
+}
+
+.dark-2 {
+  background: $background-green;
+}
+.dark {
+  background-color: $background-grey;
+}
+.dark-3 {
+  background-color: $color-primary;
+  & .mdl-typography--display-1{
+    color: $text-color-primary;
+  }
+}
+
+.heading-dark{
+  .mdl-typography--display-1 {
+    color: $text-color-primary;
+  }
+}
+.heading-light{
+  .mdl-typography--display-1 {
+    color: $color-primary;
+  }
+}
+
+.vertical-align {
+  display:flex;
+  align-items: center; /* Vertical center alignment */
+  justify-content: center; /* Horizontal center alignment */
+}
+
+.section-title {
+  .mdl-typography--subhead {
+    margin-bottom: 0;
+  }
+}
+
+.section-padding--top {
+  padding-top: 24px;
+}
+.section-padding--bottom {
+  padding-bottom: 24px;
+}
+
+.contact-us-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-height: 250px;
+    width: auto;
+  }
+}
+
+.footer-about{
+  padding-right: 32px;
+}

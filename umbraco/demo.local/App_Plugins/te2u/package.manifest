@@ -1,0 +1,101 @@
+{
+  "gridEditors": [
+    {
+      "name": "Te2u Pricing Tables",
+      "alias": "pricingTableWidget",
+      "icon": "icon-coin-euro",
+      "view": "/App_Plugins/te2u/pricingTables/pricingtables.view.html",
+      "render": "/App_Plugins/te2u/pricingTables/pricingtables.render.cshtml"
+    },
+    {
+      "name": "Te2u Feature List",
+      "alias": "featureWidget",
+      "icon": "icon-ordered-list ",
+      "view": "/App_Plugins/te2u/features/featurelist.view.html",
+      "render": "/App_Plugins/te2u/features/featurelist.render.cshtml"
+    },
+    {
+      "name": "Material Icon Picker",
+      "alias": "mdlIcons",
+      "icon": "icon-eco",
+      "view": "/App_Plugins/te2u/materialIcons/icons.view.html"
+    },
+    {
+      "name": "Te2u Customer Types",
+      "alias": "mdlIconCard",
+      "icon": "icon-people-female",
+      "view": "/App_Plugins/te2u/iconCard/iconcard.view.html",
+      "render": "/App_Plugins/te2u/iconcard/iconcard.render.cshtml"
+
+    },
+    {
+      "name": "Te2u Process",
+      "alias": "processWidget",
+      "icon": "icon-people-female",
+      "view": "/App_Plugins/te2u/processWidget/process.view.html",
+      "render": "/App_Plugins/te2u/processWidget/process.render.cshtml"
+
+    },
+    {
+      "name": "Te2u Button",
+      "alias": "mdlButton",
+      "icon": "icon-people-female",
+      "view": "/App_Plugins/te2u/button/button.view.html",
+      "render": "/App_Plugins/te2u/button/button.render.cshtml"
+
+    },
+    {
+      "name": "Headline",
+      "alias": "mdlDisplay",
+      "icon": "icon-book",
+      "view": "textstring",
+      "config": {
+        "style": "font-size:34px;line-height:34px",
+        "markup": "<h2 class='mdl-typography--display-1'>#value#</h2>"
+      }
+    },
+    {
+      "name": "Landing Page Headline",
+      "alias": "mdlDisplay2",
+      "icon": "icon-door-open",
+      "view": "textstring",
+      "config": {
+        "style": "font-size:45px; line-height:45px",
+        "markup": "<h1 class='mdl-typography--display-2'>#value#</h1>"
+      }
+    },
+    {
+      "name": "Title",
+      "alias": "mdlTitle",
+      "icon": "icon-book-alt-2",
+      "view": "textstring",
+      "config": {
+        "style": "font-size:20px",
+        "markup": "<h3 class='mdl-typography--title'>#value#</h3>"
+      }
+    },
+    {
+      "name": "Subtitle",
+      "alias": "mdlSubhead",
+      "icon": "icon-book-alt",
+      "view": "textstring",
+      "config": {
+        "style": "font-size:16px; line-height:16px",
+        "markup": "<h3 class='mdl-typography--subhead'>#value#</h3>"
+      }
+    }
+  ],
+  "javascript": [
+    "/App_Plugins/te2u/pricingTables/pricingtables.controller.js",
+    "/App_Plugins/te2u/features/featurelist.controller.js",
+    "/App_Plugins/te2u/materialIcons/icons.controller.js",
+    "/App_Plugins/te2u/iconCard/iconcard.controller.js",
+    "/App_Plugins/te2u/button/button.controller.js",
+    "/App_Plugins/te2u/services/te2u.services.js",
+    "/App_Plugins/te2u/processWidget/process.controller.js"
+  ],
+  "css": [
+    "/App_Plugins/te2u/materialIcons/icons/material-icons.css",
+    "/App_Plugins/te2u/button/backendButtonStyles.css"
+  ]
+}

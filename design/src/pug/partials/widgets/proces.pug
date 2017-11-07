@@ -1,0 +1,20 @@
+html(ng-app="app")
+    head
+        script(src="js/angular.js")
+        script(src="js/widgets/process.controller.js")
+    body(ng-controller="te2uProcessController")
+        label(for="selectOption") Select what to add:
+            hr
+            select(id="selectOption" ng-options="option for option in options" ng-model="selectedOption" style="min-width:100px")
+            div(ng-hide="selectedOption=='Icon'")
+                |table stuff
+
+            div(ng-hide="selectedOption=='Text'")
+                |icon stuff
+
+
+
+
+
+
+

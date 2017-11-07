@@ -1,0 +1,56 @@
+﻿@using System.Web.Mvc.Ajax
+@model te2u.lib.Models.ContactFormViewModel
+
+@{
+    Html.EnableClientValidation();
+    Html.EnableUnobtrusiveJavaScript();
+}
+<div id="formOuter">
+    @*@using (Html.BeginUmbracoForm("SubmitContactForm", "ContactFormSurface",
+                        new
+                        {
+                            Model.RecieverEmail,
+                            Model.Subject
+                        }, FormMethod.Post))
+        {*@
+    @using (Ajax.BeginForm("SubmitContactForm", "ContactFormSurface",
+                     new AjaxOptions
+                     {
+                         HttpMethod = "POST",
+                         InsertionMode = InsertionMode.Replace,
+                         UpdateTargetId = "formOuter"
+                     }, new {id ="contact-form"}))
+    {
+        @Html.AntiForgeryToken()
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            @Html.LabelFor(model => model.Name, new { @class = "mdl-textfield__label" })
+            @Html.TextBoxFor(m => m.Name, new { @class = "mdl-textfield__input", id = "contactEmail" })
+            @Html.ValidationMessageFor(model => model.Name, null, new { @class = "mdl-textfield__error" })
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            @Html.LabelFor(model => model.Email, new { @class = "mdl-textfield__label" })
+            @Html.TextBoxFor(m => m.Email, new { @class = "mdl-textfield__input", id = "contactEmail" })
+            @Html.ValidationMessageFor(model => model.Email, null, new { @class = "mdl-textfield__error" })
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            @Html.LabelFor(model => model.Message, new { @class = "mdl-textfield__label" })
+            @Html.TextAreaFor(m => m.Message, new { @class = "mdl-textfield__input", id = "contactEmail" })
+            @Html.ValidationMessageFor(model => model.Message, null, new { @class = "mdl-textfield__error" })
+        </div>
+        @Html.HiddenFor(model => model.SendTo)
+        @Html.HiddenFor(model => model.Subject)
+        <div>
+            <input id="form-submit" class="form-submit mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" type="submit" name="Submit" value="Send" />
+        </div>
+    }
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#form-submit").on("click",
+            function (e) {
+                e.preventDefault();
+                $("#form-submit").submit();            
+            });
+    });
+</script>

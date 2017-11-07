@@ -1,0 +1,34 @@
+<div ng-controller="te2u.featureListController" class="wmd-panel">
+    <table style="width: 100%">
+        <tr>
+            <td>
+                <label for="featureNumber">Number:</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input  ng-model="control.number" style="width: 95%" id="featureNumber" type="number" value="0"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="featureTitle">Title:</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input  ng-model="control.title" style="width: 95%" id="featureTitle" type="text" placeholder="Feature title.."/>
+            </td>
+        </tr>
+        <tr >
+            <td style="padding-top:16px">
+                <label for="featureDescription">Description:</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <textarea   ng-model="control.description" style="width: 95%; padding:8px" id="featureDescription" rows="4" type="text" placeholder="Feature description.."/>
+            </td>
+        </tr>
+    </table>
+</div>

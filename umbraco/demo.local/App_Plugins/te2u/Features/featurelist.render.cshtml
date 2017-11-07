@@ -1,0 +1,8 @@
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+
+
+<h3 class="mdl-typography--title">
+    <i class="icon-circle">@Model.number</i>
+    @Model.title
+</h3>
+<p>@Html.Raw(Html.Encode(Model.description).Replace("\n", "</p><p>"))</p>

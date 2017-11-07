@@ -1,0 +1,26 @@
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+
+
+@{ bool featured = false;
+    
+    if(Model.featured!=null){
+    featured = true;
+    }    
+    }
+<div class="pricing-table  mdl-shadow--4dp mdl-typography--text-center @{if (featured) {<text>featured </text>} } ">
+    <div class="pricing-table--title"> @Model.title</div>
+    <div class="pricing-table--subtitle">
+        <div class="pricing-table--price"><span class="mdl-typography--display-2"> @Model.price</span>@Model.currency</div>
+        <p class="pricing-table--description">@Model.description</p>
+    </div>
+    <div class="triangle"></div>
+    <div class="pricing-table--features">
+        @foreach (var feature in Model.features)
+        {
+            <p>@feature</p>
+        }
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+        <a href='@Model.link.url' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect @{if(featured){<text>mdl-button--primary</text>}}">@Model.link.name</a>
+    </div>
+</div>

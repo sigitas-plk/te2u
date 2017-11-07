@@ -1,0 +1,32 @@
+include ../_mixins.pug
+
+mixin title(title)
+    .mdl-cell.mdl-cell--12-col
+        h3.mdl-typography--title= title
+
+mixin cell
+    .mdl-cell.mdl-cell--6-col.mdl-cell--5-col-tablet
+        block
+
+mixin cell2
+    .mdl-cell.mdl-cell--4-col.mdl-cell--3-col-tablet
+        block
+
+section.te2u
+    +container
+        +sectionTitle("Meet the Team")
+        .mdl-grid
+            +title("Kirsten Comlossy - English Communication Coach")
+            +cell2
+                img(src="img/frontPage/team/kirsten.jpg" class="picture mdl-shadow--2dp")
+            +cell
+               p Impeccable English communication is an influential skill and knowing how to properly use it both in presentations and meetings as well as in casual negotiations can be an invaluable asset.
+               p At TE2U we help you navigate the world of professional English communication, both linguistically and tactfully.
+            +title("Another Employee - Translations")
+            +cell2
+                img(src="img/frontPage/team/placeholder.png" class="picture mdl-shadow--2dp")
+            +cell
+                p Contrary to popular belief, Lorem Ipsum is not simply random text.
+                p It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+                p looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+

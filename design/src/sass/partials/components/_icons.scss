@@ -1,0 +1,47 @@
+@import "../_colors";
+$icon-circle-size: 38px;
+$icon-bubble-size: 90px;
+
+.icon-circle{
+  height: $icon-circle-size;
+  width: $icon-circle-size;
+  border-radius: 50%;
+  margin-bottom: -5px;
+  margin-right: 10px;
+  padding: 0;
+  overflow: hidden;
+  background: $color-primary;
+  box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.24);
+  display: inline-block;
+  font-style: normal;
+  font-size: 16px;
+  line-height: $icon-circle-size;
+  text-align:center;
+  position:  relative;
+  top: 5px;
+}
+
+
+.icon-bubble {
+  display: block;
+  margin: $icon-bubble-size/2 auto;
+  height: $icon-bubble-size;
+  width: $icon-bubble-size;
+  &-right {
+    border-radius: 50% 50% 0 50%;
+  }
+  &-left {
+    border-radius: 50% 50% 50% 0;
+
+  }
+}
+
+.icon-bubble.material-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  color: $color-white;
+  background: $color-primary;
+  text-shadow: 2px 2px rgba(0, 0, 0, .12), 2px 2px rgba(0, 0, 0, .12);
+}

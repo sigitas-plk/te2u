@@ -1,0 +1,14 @@
+extends _layout.pug
+block navigation
+    -var links =["Products","Pricing","About Us","Contact Us"];
+        header.mdl-layout__header
+            .mdl-layout__header-row
+        .mdl-layout__drawer
+            span.mdl-layout-title   te2u logo
+            nav.mdl-navigation
+                for link in links
+                    a(href="").mdl-navigation__link #{link}
+
+
+
+

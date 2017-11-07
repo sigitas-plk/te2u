@@ -1,0 +1,20 @@
+.umb-grid .mdl-grid {
+  max-width:1000px;
+}
+/* Responsive Images */
+img {
+  width: 100%;
+  height: auto;
+}
+figure.te2u--logo{
+  height: 100px;
+  background:no-repeat center;
+  background-size:contain;
+}
+
+
+/*Contact Form Error message visibility*/
+#contact-form .mdl-textfield__error {
+  visibility: visible;
+}
+

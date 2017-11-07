@@ -1,0 +1,55 @@
+include ../_mixins.pug
+doctype html
+html
+    head
+        title te2u-design
+        meta(charset="UTF-8")
+        meta(name="viewPort" content="width=device-width, initial-scale=1.0")
+
+        block styles
+            link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css")
+            link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+            link(rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.light_green-orange.min.css")
+            link(rel="stylesheet" href="css/styles.css")
+
+        block scripts
+            script(defer src="https://code.getmdl.io/1.3.0/material.min.js")
+            script(src="js/jquery.js" type="text/javascript")
+    body.dark-2
+        section
+            .mdl-grid.max-width
+                .mdl-cell.mdl-cell--4-col.mdl-cell--2-offset-desktop
+                        h1.mdl-typography--display-1.landing-title Almost there
+                        p Cumque quod aut ipsa quos et aut magni. Sapiente recusandae officiis et. Ipsam voluptates qui ipsa aut molestias laborum et et. Saepe ducimus odio ullam. Ratione ratione atque eligendi enim quidem. Nemo labore voluptatem consequatur sunt sed et illo nesciunt.
+                .mdl-cell.mdl-cell-3-col
+                    .pricing-table.featured
+                        .pricing-table--title
+                            h2.mdl-typography--title Book a course
+                        .pricing-table--features
+                            .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+                                label.mdl-textfield__label First Name
+                                input(type="text").mdl-textfield__input
+                            .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+                                label.mdl-textfield__label Last Name
+                                input(type="text").mdl-textfield__input
+                            .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+                                label.mdl-textfield__label E-mail
+                                input(type="email").mdl-textfield__input
+                            .contact-selectfield
+                                label.contact-selectfield--label
+                                    | Course
+                                select.contact-selectfield--selection
+                                    option course
+                                    option course 2
+                                    option course with a very very long name in dropdown
+                            .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+                                label.mdl-textfield__label Additional comments
+                                textarea(rows="5").mdl-textfield__input
+                            .pricing-table--action
+                                a.mdl-button.mdl-button--primary.mdl-button--raised book
+
+
+
+
+
+

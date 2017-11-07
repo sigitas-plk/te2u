@@ -1,0 +1,13 @@
+include ../_mixins.pug
+section
+    .mdl-grid.dark-2
+        each val in [1,2,3,4,5]
+            .mdl-cell.mdl-cell--4-col
+                .blogpost-card
+                    .blogpost-card--img-container
+                        img(src="img/blog/" + val + ".jpg").blogpost-card--img
+                    p.blogpost-card--date March 17th, 2017
+                    h1.mdl-typography--title.blogpost-card--title Title of the blog post which is really effin long and stuff
+                    p.blogpost-card--body Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec sem eu enim fringilla vestibulum a ut mi. Ut eu augue id magna tempor convallis. Duis ornare blandit convallis. Class aptent cras amet.
+                    .blogpost-card--action
+                        a(href).mdl-button.mdl-button--primary Continue reading..

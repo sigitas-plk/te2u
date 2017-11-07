@@ -1,0 +1,40 @@
+﻿@{
+    string heading = string.Format("Thank you {0} for your message!", TempData["Name"]);
+    string body = "We will get back to you as soon as possible.";
+
+    if (TempData["Error"] != null)
+    {
+        heading = "Ooops! Something went wrong";
+        body = "Currently we are experiencing technical difficulties with our mail servers. Please try again later or contact us via phone.";
+    }
+
+    <dialog class="mdl-dialog" style="background-color:white">
+        <h4 class="mdl-typography--title" style="padding: 0 20px;">@heading</h4>
+        <p class="mdl-dialog__content">@body</p>
+        <p class="mdl-dialog__actions">
+            <button id="btn-close" class="mdl-button mdl-button--colored mdl-button--raised">Close</button>
+            <a href="/" id="btn-home" type="button" class="mdl-button mdl-button--colored">Home</a>
+        </p>
+    </dialog>
+}
+
+<script>
+    $(document).ready(function () {
+
+        var dialog = $('.mdl-dialog').bPopup();
+            
+            //onOpen: reset()
+        //});
+        dialog.find("#btn-close").on("click", function (e) {
+            e.preventDefault();
+            dialog.close()
+        });
+        //function reset() {
+        //    $('#contact-from').find("textarea").val('');
+        //    $('#contact-from').find("input:text").val('');
+        //}
+        $(window).bind("pageshow", function () {
+            reset();
+        });
+    });
+</script>

@@ -1,0 +1,21 @@
+include ../_mixins.pug
+
+-var titles = ["What if I don't like the course?","Where the courses are taking place?","Is It possible to talk via skype?"]
+
+mixin collapsibleRow(title,body)
+    li.collapsible--row.mdl-cell.mdl-cell--12-col
+        h6.mdl-js-button.mdl-js-ripple-effect.collapsible--header= title
+        p.collapsible--body= body
+
+section.te2u.dark-2
+    +container
+        +sectionTitle("F.A.Q.")
+            +sectionSubtitle("Our job is to help you achieve real progress. This requires a strategy and approach which go beyond the limits of conventional lessons or teaching")
+
+        ul.collapsible.mdl-grid.mdl-grid--no-spacing.mdl-shadow--4dp
+            for title in titles
+                +collapsibleRow(title,"Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.")
+
+        .mdl-cell.mdl-cell--12-col.faq-contact.mdl-typography--text-right
+            span.mdl-typography--subhead Still have questions? Write us a message and will get back to you
+            a.mdl-button.mdl-button--accent.mdl-button--raised Contact Us

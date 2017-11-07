@@ -1,0 +1,14 @@
+include ../_mixins.pug
+
+mixin picture(url)
+    .mdl-cell.mdl-cell--6-col.mdl-cell--4-col-tablet.office-picture--container
+        img.office-picture(src="img/frontPage/office/"+url)
+
+section.te2u.dark-2
+    +container
+        +sectionTitle("Our Office")
+            +sectionSubtitle("Our office space offers a great environment for 1 on 1 training. We are located in the north west part of Copenhagen at a co-working space Symbion.")
+        +picture("symbion.jpg")
+        +picture("officeEntrance.jpg")
+        +picture("office.jpg")
+        +picture("office2.jpg")

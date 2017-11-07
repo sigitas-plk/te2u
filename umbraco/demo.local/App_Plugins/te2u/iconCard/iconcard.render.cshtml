@@ -1,0 +1,10 @@
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+
+    <i class="material-icons icon-market mdl-card__media">
+        @if (Model.icon != null)
+        {
+            @Model.icon
+        }
+    </i>
+    <h4 class="mdl-typography--title">@Model.title</h4>
+    <p>@Html.Raw(Html.Encode(Model.description).Replace("\n", "</p><p>"))</p>

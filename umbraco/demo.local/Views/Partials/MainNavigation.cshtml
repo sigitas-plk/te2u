@@ -1,0 +1,19 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{ var home = CurrentPage.Site(); }
+
+@if (home.Children.Any())
+{
+    @* Get the first page in the children *@
+    var naviLevel = home.Children.First().Level;
+    
+    @* Add in level for a CSS hook *@
+    <nav class="mdl-navigation">            
+        @* For each child page under the home node *@
+        @foreach (var childPage in home.Children)
+        {   
+                              
+         <a class="mdl-navigation__link has-child @(childPage.IsAncestorOrSelf(CurrentPage) ? "selected" : null)" href="@childPage.Url">@childPage.Name</a>
+					
+        }
+    </nav>
+}

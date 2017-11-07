@@ -1,0 +1,11 @@
+<div ng-controller="te2uButtonController">
+
+    <a ng-click="chooseLink()">
+        <p class="{{control.value.css ? control.value.css : 'btn'}}">
+            {{value}}
+            <span ng-hide="control.value.name">Choose Link</span>
+            {{control.value.name}}
+        </p>
+    </a>
+
+</div>

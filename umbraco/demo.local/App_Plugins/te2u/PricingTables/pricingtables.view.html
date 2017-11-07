@@ -1,0 +1,55 @@
+<div ng-controller="te2u.pricingTablesController" class="wmd-panel">
+    <table>
+        <td>
+            <tr><h6 style="margin: 10px 0 2px 5px">Featured? &nbsp;<input type="checkbox" ng-model="control.featured">
+            </h6></tr>
+            <tr></tr>
+            <tr><h6 style="margin: 10px 0 2px 5px">Title:</h6></tr>
+            <tr><input style="width: 100%" type="text" placeholder="Title.." ng-model="control.title"></tr>
+            <tr><h6 style="margin: 10px 0 2px 5px">Price:</h6></tr>
+            <tr><input style="width: 100%" type="number" placeholder="Price.." ng-model="control.price"></tr>
+            <tr><h6 style="margin: 10px 0 2px 5px">Currency:</h6></tr>
+            <tr><input style="width: 100%" type="text" placeholder="Currency.." ng-model="control.currency"></tr>
+            <tr><h6 style="margin: 10px 0 2px 5px">Description:</h6></tr>
+            <tr><input style="width: 100%" type="text" placeholder="Short description.." ng-model="control.description">
+            </tr>
+            <tr><h6 style="margin: 10px 0 2px 5px">Features:</h6></tr>
+            <tr>
+                <table>
+                    <tr style="border: solid 1px #E0E0E0" ng-repeat="val in  control.features track by $index">
+                        <td style="padding-left:5px">
+                            <div>
+                                <div><a style="color: #53a93f" href ng-click="moveUp($index)" class="icon icon-arrow-up"
+                                        ng-hide="$index==0"></a></div>
+                            </div>
+                            <div>
+                                <div><a href style="color: #53a93f" ng-click="moveDown($index)"
+                                        class="icon icon-arrow-down" ng-hide="$index==control.features.length-1"></a>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="padding-left: 20px; padding-right: 20px; width: 100%">{{val}}</td>
+                        <td style="padding: 5px 5px 5px 0"><a href ng-click="remove($index)"
+                                                              class="icon icon-delete red"></a></td>
+                    </tr>
+
+                </table>
+            </tr>
+            <tr>
+                <input style="width: 100%" type="text" ng-model="inputVal" placeholder="Type in feature"/></tr>
+            <tr>
+                <a style="width: 100%" class="btn btn-primary nput-block-level" ng-click="add(inputVal)">Add Feature</a>
+
+            </tr>
+
+            <tr><h6 style="margin: 10px 0 2px 5px">Button Text:</h6></tr>
+            <tr>
+                <input style="width:100%" type="text" placeholder="Button text.." ng-model="control.link.name"></tr>
+
+            <tr><a style="width:100%" class="btn btn-primary" ng-click="open()">
+                {{control.link.name==undefined?"Add Button Link":"Change Button Link"}}
+            </a>
+            </tr>
+        </td>
+    </table>
+</div>

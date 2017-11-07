@@ -1,0 +1,7 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@{
+    string subject = Model.MacroParameters["subject"] as string;
+    string reciever = Model.MacroParameters["recieverEmail"] as string;
+
+    Html.RenderAction("RenderContactForm", "ContactFormSurface", new { reciever, subject });
+}

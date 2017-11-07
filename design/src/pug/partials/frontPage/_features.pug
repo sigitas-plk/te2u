@@ -1,0 +1,13 @@
+include ../_mixins.pug
+
+-var features = ["Technical Writing","Oral Communication","English Vocabulary","Accent Reduction","Presentation Skills","Lorem Ipsum"]
+
+section.te2u
+    +container
+        +sectionTitle("Improve a full range of communication skills")
+        for feature, index in features
+            .mdl-cell.mdl-cell--6-col.mdl-cell--4-col-tablet
+                h3.mdl-typography--title
+                    i.icon-circle #{index+1}
+                    |#{feature}
+                p Non sit tempore fuga. Et maiores atque quia sit et. Autem deleniti eum quia qui omnis voluptate. Quis accusantium pariatur et facere quasi. Harum illum incidunt non id aut.…

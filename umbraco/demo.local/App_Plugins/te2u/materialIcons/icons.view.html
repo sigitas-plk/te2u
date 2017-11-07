@@ -1,0 +1,12 @@
+<div ng-controller="te2uIconPicker">
+    <table>
+        <tr>
+            <td>
+                <a ng-click="choose()">
+                    <i ng-show="control.value" style="font-size:48px; padding:8px" class="btn material-icons">{{control.value}}</i>
+                    <p class="btn" ng-hide="control.value">Choose Icon</p>
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
